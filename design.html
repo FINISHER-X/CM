@@ -4,39 +4,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUSTOMMADE</title>
+    <title>Custom Made Store</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <div class="hero">
-        <div class="logo"> </div>
-        <div class="header">
-            <a href="index.html">
 
-                HOME
-            </a>
-            <a href="about.html">
-                ABOUT
-            </a>
-            <a href="service.html">
-                SERVICE
-            </a>
-            <a href="design.html">
-                DESIGN
-            </a>
-            <a href="contact.html">
-                CONTACT
+    <div class="container nav-container">
 
-            </a>
+        <a href="index.html" class="logo"></a>
 
-            <form action="search">
-                <input type="text" placeholder="search....">
+        <nav class="navbar">
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="service.html" class="active">SERVICE</a></li>
+                <li><a href="design.html">DESIGN</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+
+        </nav>
+
+        <form class="search-box">
+
+            <input type="text" placeholder="Search...">
+
+            <button>
+
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </form>
-        </div>
+
+            </button>
+
+        </form>
+
     </div>
-    
-    </body>
-    </html>
+
+</header>
+
+
+
+    <section class="products-page">
+
+        <div class="categories">
+
+            <div class="category active">
+                <i class="fa-solid fa-border-all"></i>
+                <p>All Products</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-solid fa-book"></i>
+                <p>Journals</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-solid fa-note-sticky"></i>
+                <p>Jotters</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-regular fa-bookmark"></i>
+                <p>Notebooks</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-regular fa-calendar"></i>
+                <p>Planners</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-solid fa-book-open"></i>
+                <p>Diaries</p>
+            </div>
+
+            <div class="category">
+                <i class="fa-solid fa-pen-ruler"></i>
+                <p>Stationery</p>
+            </div>
+
+        </div>
+
+        <div class="top-bar">
+
+            <button class="filter-btn">
+                <i class="fa-solid fa-filter"></i>
+                Filter
+            </button>
+
+            <p id="resultCount"></p>
+
+            <select id="sort">
+                <option>Featured</option>
+                <option>Low Price</option>
+                <option>High Price</option>
+            </select>
+
+        </div>
+
+        <div class="products" id="products"></div>
+
+        <div class="cta">
+
+            <div>
+                <h2>Looking for something unique?</h2>
+                <p>We offer fully customizable journals and stationery.</p>
+            </div>
+
+            <button>
+                CUSTOMIZE NOW
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+<script>
+
+    const products = [
+
+        {
+            name: "Classic Journal",
+            type: "A5 Linen Cover",
+            price: 409,
+            category: "Journals",
+            image: "images/product1.jpg"
+        },
+
+        {
+            name: "Floral Jotter",
+            type: "Pocket Size",
+            price: 299,
+            category: "Jotters",
+            image: "images/product2.jpg"
+        },
+
+        {
+            name: "Daily Planner",
+            type: "A5 Dated",
+            price: 609,
+            category: "Planners",
+            image: "images/product3.jpg"
+        },
+
+        {
+            name: "Hardcover Notebook",
+            type: "Ruled Pages",
+            price: 449,
+            category: "Notebooks",
+            image: "images/product4.jpg"
+        },
+
+        {
+            name: "Leather Diary",
+            type: "Premium",
+            price: 899,
+            category: "Diaries",
+            image: "images/product5.jpg"
+        },
+
+        {
+            name: "Weekly Planner",
+            type: "Undated",
+            price: 599,
+            category: "Planners",
+            image: "images/product6.jpg"
+        },
+
+        {
+            name: "Spiral Notebook",
+            type: "Ruled",
+            price: 349,
+            category: "Notebooks",
+            image: "images/product7.jpg"
+        },
+
+        {
+            name: "Pocket Jotter",
+            type: "Mini",
+            price: 199,
+            category: "Jotters",
+            image: "images/product8.jpg"
+        },
+
+        {
+            name: "Dot Grid Notebook",
+            type: "Dot Grid",
+            price: 449,
+            category: "Notebooks",
+            image: "images/product9.jpg"
+        },
+
+        {
+            name: "Kids Notebook",
+            type: "Ruled",
+            price: 249,
+            category: "Notebooks",
+            image: "images/product10.jpg"
+        },
+
+        {
+            name: "Stationery Set",
+            type: "Gift Set",
+            price: 509,
+            category: "Stationery",
+            image: "images/product11.jpg"
+        },
+
+        {
+            name: "Sticker Pack",
+            type: "Assorted",
+            price: 149,
+            category: "Stationery",
+            image: "images/product12.jpg"
+        }
+
+    ];
+
+    const container = document.getElementById("products");
+
+    function displayProducts(items) {
+
+        container.innerHTML = "";
+
+        items.forEach(product => {
+
+            container.innerHTML += `
+
+<div class="card">
+
+<img src="${product.image}" alt="">
+
+<div class="card-content">
+
+<h3>${product.name}</h3>
+
+<p>${product.type}</p>
+
+<div class="price">₦${product.price}</div>
+
+</div>
+
+</div>
+
+`;
+
+        });
+
+        document.getElementById("resultCount").innerHTML =
+            `Showing 1-${items.length} of ${items.length} products`;
+
+    }
+
+    displayProducts(products);
+
+    // Sorting
+
+    document.getElementById("sort").addEventListener("change", function () {
+
+        let value = this.value;
+
+        if (value === "Low Price") {
+
+            products.sort((a, b) => a.price - b.price);
+
+        }
+
+        if (value === "High Price") {
+
+            products.sort((a, b) => b.price - a.price);
+
+        }
+
+        displayProducts(products);
+
+    });
+
+    // Category Filter
+
+    const categories = document.querySelectorAll(".category");
+
+    categories.forEach(category => {
+
+        category.addEventListener("click", () => {
+
+            categories.forEach(btn => btn.classList.remove("active"));
+
+            category.classList.add("active");
+
+            const text = category.innerText.trim();
+
+            if (text === "All Products") {
+
+                displayProducts(products);
+
+            } else {
+
+                const filtered = products.filter(item => item.category === text);
+
+                displayProducts(filtered);
+
+            }
+
+        });
+
+    });
+</script>
+
+</html>
