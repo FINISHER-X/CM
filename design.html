@@ -13,41 +13,47 @@
 
 <body>
 
-    <div class="container nav-container">
+    <header class="hero">
 
-        <a href="index.html" class="logo"></a>
+        <div class="container nav-container">
 
-        <nav class="navbar">
+            <a href="index.html" class="logo" aria-label="Custom Made home"></a>
 
-            <ul class="nav-links">
-
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="service.html" class="active">SERVICE</a></li>
-                <li><a href="design.html">DESIGN</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-
-            </ul>
-
-        </nav>
-
-        <form class="search-box">
-
-            <input type="text" placeholder="Search...">
-
-            <button>
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
-        </form>
+            <nav class="navbar" id="navMenu">
 
-    </div>
+                <ul class="nav-links">
 
-</header>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="service.html">SERVICE</a></li>
+                    <li><a href="design.html" class="active">DESIGN</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
 
+                </ul>
 
+            </nav>
+
+            <form class="search-box">
+
+                <input type="text" placeholder="Search...">
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </header>
 
     <section class="products-page">
 
@@ -125,7 +131,7 @@
 
     </section>
 
-    <script src="script.js"></script>
+<script src="index.js"></script>
 
 </body>
 
@@ -136,97 +142,97 @@
         {
             name: "Classic Journal",
             type: "A5 Linen Cover",
-            price: 409,
+            price: 4500,
             category: "Journals",
-            image: "images/product1.jpg"
+            image: "CM101.png"
         },
 
         {
             name: "Floral Jotter",
             type: "Pocket Size",
-            price: 299,
+            price: 6500,
             category: "Jotters",
-            image: "images/product2.jpg"
+            image: "CM1.png"
         },
 
         {
             name: "Daily Planner",
             type: "A5 Dated",
-            price: 609,
+            price: 6000,
             category: "Planners",
-            image: "images/product3.jpg"
+            image: "CM101.png"
         },
 
         {
             name: "Hardcover Notebook",
             type: "Ruled Pages",
-            price: 449,
+            price: 4500,
             category: "Notebooks",
-            image: "images/product4.jpg"
+            image: "CM1.png"
         },
 
         {
             name: "Leather Diary",
             type: "Premium",
-            price: 899,
+            price: 8000,
             category: "Diaries",
-            image: "images/product5.jpg"
+            image: "CM101.png"
         },
 
         {
             name: "Weekly Planner",
             type: "Undated",
-            price: 599,
+            price: 5990,
             category: "Planners",
-            image: "images/product6.jpg"
+            image: "CM1.png"
         },
 
         {
             name: "Spiral Notebook",
             type: "Ruled",
-            price: 349,
+            price: 6000,
             category: "Notebooks",
-            image: "images/product7.jpg"
+            image: "CM.png"
         },
 
         {
             name: "Pocket Jotter",
             type: "Mini",
-            price: 199,
+            price: 6990,
             category: "Jotters",
-            image: "images/product8.jpg"
+            image: "CM1.png"
         },
 
         {
             name: "Dot Grid Notebook",
             type: "Dot Grid",
-            price: 449,
+            price: 4490,
             category: "Notebooks",
-            image: "images/product9.jpg"
+            image: "CM101.png"
         },
 
         {
             name: "Kids Notebook",
             type: "Ruled",
-            price: 249,
+            price: 4500,
             category: "Notebooks",
-            image: "images/product10.jpg"
+            image: "CM101.png"
         },
 
         {
             name: "Stationery Set",
             type: "Gift Set",
-            price: 509,
+            price: 5000,
             category: "Stationery",
-            image: "images/product11.jpg"
+            image: "CM1.png"
         },
 
         {
             name: "Sticker Pack",
             type: "Assorted",
-            price: 149,
+            price: 6000,
             category: "Stationery",
-            image: "images/product12.jpg"
+            image: "CM101.png"
         }
 
     ];
@@ -319,6 +325,9 @@
         });
 
     });
+
 </script>
+
+</body>
 
 </html>

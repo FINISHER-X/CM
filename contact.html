@@ -4,39 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUSTOMMADE</title>
+    <title>Custom Made | Journals & Stationery</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-    <div class="hero">
-        <div class="logo"> </div>
-        <div class="header">
-            <a href="index.html">
 
-                HOME
-            </a>
-            <a href="about.html">
-                ABOUT
-            </a>
-            <a href="service.html">
-                SERVICE
-            </a>
-            <a href="design.html">
-                DESIGN
-            </a>
-            <a href="contact.html">
-                CONTACT
+    <!-- ================= NAVIGATION ================= -->
 
-            </a>
+    <header class="hero">
 
-            <form action="search">
-                <input type="text" placeholder="search....">
-                <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo" aria-label="Custom Made home"></a>
+
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar" id="navMenu">
+
+                <ul class="nav-links">
+
+                    <li><a href="index.html">HOME</a></li>
+
+                    <li><a href="about.html">ABOUT</a></li>
+
+                    <li><a href="service.html">SERVICE</a></li>
+
+                    <li><a href="design.html">DESIGN</a></li>
+
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+
+                </ul>
+
+            </nav>
+
+            <form class="search-box">
+
+                <input type="text" placeholder="Search...">
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
             </form>
+
         </div>
-    </div>
-    
-    </body>
-    </html>
+
+    </header>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
