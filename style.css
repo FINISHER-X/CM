@@ -17,6 +17,10 @@ body{
     line-height:1.6;
 }
 
+.home-page{
+    background:#000;
+}
+
 
 
 /*REUSABLE */
@@ -179,7 +183,6 @@ body{
 
     background-image:url("CM.png");
     background-size:cover;
-
     background-repeat:no-repeat;
 
     min-height:750px;
@@ -194,6 +197,7 @@ body{
 
     display:flex;
     align-items:center;
+
 
 }
 
@@ -260,7 +264,7 @@ body{
     grid-template-columns:repeat(6,1fr);
 
     gap:15px;
-    background-color:#E5D0C0;
+    background-color:#000;
     padding: 1px;
     border-radius: 20px;
     
@@ -316,11 +320,8 @@ body{
 .design-section{
 
     background-image:url("CM1.png");
-
     background-size:cover;
-
     background-position:center;
-
     background-repeat:no-repeat;
 
     min-height:700px;
@@ -359,7 +360,6 @@ body{
     font-size:18px;
 
 }
-
 
 /*ABOUT HERO*/
 
@@ -730,6 +730,10 @@ body{
 
 }
 
+.categories .category:last-child{
+    grid-column:2;
+}
+
 /*TOP BAR*/
 
 .top-bar{
@@ -1028,7 +1032,33 @@ body{
 
 }
 
-@media (max-width: 680px){
+@media (max-width: 750px){
+
+    .home-page{
+        background:#000 url("CM.png") center center / 100% 100% no-repeat;
+    }
+
+    .home-page .hero{
+        background:#000;
+    }
+
+    .home-page .home-hero,
+    .home-page .design-section{
+        background:transparent;
+    }
+
+    .home-page .design-section{
+        border-top:3px solid #000;
+        margin-top:50px;
+    }
+
+    .home-page .line{
+        background:#000;
+    }
+
+    .stationery{
+        display:none;
+    }
 
     .logo{
         width:120px;
@@ -1054,15 +1084,40 @@ body{
     }
 
     .hero-text p{
-        font-size:16px;
+        font-size:18px;
     }
 
     .stationery{
         margin-top:80px;
     }
 
+    .stationery{
+        margin-top:60px;
+    }
+
+    /* show three stationery cards per row on narrow screens */
     .stationery-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(3,1fr);
+        gap:8px;
+        padding:4px;
+    }
+
+    .stationery-grid .card{
+        padding:8px;
+    }
+
+    .stationery-grid .icon{
+        font-size:24px;
+        margin-bottom:8px;
+    }
+
+    .stationery-grid .card h3{
+        font-size:12px;
+        margin-bottom:6px;
+    }
+
+    .stationery-grid .card p{
+        font-size:11px;
     }
 
     .design-section{
@@ -1084,12 +1139,33 @@ body{
     }
 
     .desire-text{
-        font-size:16px;
+        font-size:15px;
         margin-bottom:40px;
     }
 
     .values{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+    }
+
+    .value-card{
+        padding:12px 6px;
+        border-radius:12px;
+    }
+
+    .value-card i{
+        font-size:26px;
+        margin-bottom:6px;
+    }
+
+    .value-card h3{
+        font-size:12px;
+        margin-bottom:5px;
+    }
+
+    .value-card p{
+        font-size:11px;
+        line-height:1.3;
     }
 
     .brand-image{
@@ -1101,7 +1177,33 @@ body{
     }
 
     .services-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
+    }
+
+    .service-card{
+        padding:15px 8px;
+        border-radius:12px;
+    }
+
+    .service-card .circle{
+        width:55px;
+        height:55px;
+        margin-bottom:10px;
+    }
+
+    .service-card .circle i{
+        font-size:24px;
+    }
+
+    .service-card h3{
+        font-size:14px;
+        margin-bottom:6px;
+    }
+
+    .service-card p{
+        font-size:11px;
+        line-height:1.3;
     }
 
     .services-section .section-title h2{
@@ -1114,8 +1216,26 @@ body{
     }
 
     .categories{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-        gap:12px;
+        grid-template-columns:repeat(3,minmax(0,1fr));
+        gap:8px;
+    }
+
+    .categories .category:last-child{
+        grid-column:2;
+    }
+
+    .category{
+        padding:10px 4px;
+        border-radius:10px;
+    }
+
+    .category i{
+        font-size:22px;
+        margin-bottom:5px;
+    }
+
+    .category p{
+        font-size:10px;
     }
 
     .top-bar{
@@ -1129,11 +1249,25 @@ body{
     }
 
     .products{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:10px;
     }
 
-    .card img{
-        height:240px;
+    .products .card img{
+        height:150px;
+    }
+
+    .products .card-content{
+        padding:10px;
+    }
+
+    .products .card h3{
+        font-size:14px;
+    }
+
+    .products .card p,
+    .products .price{
+        font-size:12px;
     }
 
     .cta{
